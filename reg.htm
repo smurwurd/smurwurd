@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/Icons/css/all.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="shortcut icon" href="image/PC Fav.png" type="image/x-icon" />
+  </head>
+  <body class="reg-body vh-1 py-4">
+    <div class="row justify-content-center align-items-center h-100 g-0">
+      <div class="col-11 col-md-8 col-lg-4">
+        <img src="image/Payclick.png" class="my-3 mx-5" alt="pay-click" width="70%" height="80px" />
+        <div class="card p-2">
+          <form action="" class="registration m-3">
+            <h2 class="text-danger fw-bold text-center">Welcome</h2>
+            <p class="text-danger fw-bold text-center">Register Here</p>
+            <div class="mb-3">
+              <label for="cName" class="form-label">Surname<span style="color: red">*</span></label>
+              <input class="form-control" id="cName" placeholder="" required />
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label"
+                >First Name<span style="color: red">*</span>
+              </label>
+              <input class="form-control" id="name" placeholder="" required />
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">
+                Phone Number<span style="color: red">*</span></label
+              >
+              <input
+                type="phone"
+                class="form-control"
+                id="phone"
+                placeholder="+23400-000-000-00"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">
+                Email address<span style="color: red">*</span></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="dob" class="form-label">
+                Date of Birth<span style="color: red">*</span></label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="dob"
+                placeholder="Enter birth date"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">
+                Password<span style="color: red">*</span>
+              </label>
+              <div style="position: relative">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="password"
+                  class="form-control round-lg password"
+                  style="padding-right: 32px"
+                />
+                <i
+                  class="fas fa-eye-slash togglePassword"
+                  id="togglePassword"
+                  style="position: absolute; right: 8px; top: 30%; cursor: pointer"
+                  title="Show/Hide Password"
+                ></i>
+              </div>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked"
+                checked
+                required
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                Agree to the <a href="index.html#t&c">Term and Conditions</a> guarding this site
+                <span style="color: red">*</span>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="d-flex btn btn-danger justify-content-between w-100 py-2 reg-btn"
+            >
+              REGISTER <i class="fas fa-arrow-right my-1"></i>
+            </button>
+            <div class="text-center mt-1">
+              <a href="login.htm" class="text-decoration-none fw-bold">RETURN TO SIGN IN</a>
+            </div>
+            <div class="text-end mt-1">
+              <a href="#" class="text-decoration-none fs-6"><i class="fas fa-earth"></i>English</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="js/pay-click_script.js"></script> -->
+    <script>
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#password");
+
+      togglePassword.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+
+        // toggle the icon
+        this.classList.toggle("fa-eye");
+      });
+    </script>
+  </body>
+</html>

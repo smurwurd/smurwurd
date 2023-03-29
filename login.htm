@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign-in</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/Icons/css/all.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="shortcut icon" href="image/PC Fav.png" type="image/x-icon" />
+  </head>
+  <body class="sign-in_body vh-100 pb-5">
+    <div class="row justify-content-center align-items-center h- g-0">
+      <div class="col-11 col-md-8 col-lg-4">
+        <img
+          src="image/Payclick.png"
+          class="my-3 mx-5"
+          alt="pay-click"
+          width="70%"
+          height="80px"
+          style=""
+        />
+        <div class="card p-2">
+          <form action="" class="registration m-3">
+            <h2 class="text-danger fw-bold text-center">Welocome</h2>
+            <p class="text-danger fw-bold text-center">Login Here</p>
+            <div class="mb-3">
+              <label for="email" class="form-label">
+                Email address<span style="color: red">*</span></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="name@example.com"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">
+                Password<span style="color: red">*</span>
+              </label>
+              <br />
+              <div style="position: relative">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="password"
+                  class="form-control round-lg"
+                  style="padding-right: 32px"
+                />
+                <i
+                  class="fas fa-eye-slash"
+                  id="togglePassword"
+                  style="position: absolute; right: 8px; top: 30%; cursor: pointer"
+                  title="Show/Hide Password"
+                ></i>
+              </div>
+            </div>
+            <a href="#" class="text-decoration-none fw-bold">FORGOT PASSWORD?</a>
+            <button
+              type="submit"
+              class="d-flex btn btn-danger justify-content-between w-100 py-2 reg-btn"
+            >
+              CONTINUE <i class="fas fa-arrow-right my-1"></i>
+            </button>
+            <div class="text-center mt-1"><p>dont have an account?</p></div>
+            <div class="text-center">
+              <a href="reg.htm" class="text-decoration-none fw-bold">REGISTER HERE</a>
+            </div>
+            <div class="text-end mt-1">
+              <a href="#" class="text-decoration-none fs-6"><i class="fas fa-earth"></i>English</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="js/pay-click_script.js"></script> -->
+    <script>
+      const togglePassword = document.querySelector("#togglePassword");
+      const password = document.querySelector("#password");
+
+      togglePassword.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+
+        // toggle the icon
+        this.classList.toggle("fa-eye");
+      });
+    </script>
+  </body>
+</html>
